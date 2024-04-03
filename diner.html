@@ -29,7 +29,7 @@
     displayTheMenu();
 
     async function getTheMenu() {
-      let response = await fetch(host + "/diner");
+      let response = await fetch(host + "/merger/diner");
       let menu = await response.json();
       return menu;
     }
