@@ -15,11 +15,11 @@
     <li><a class="active" href="pancakehouse.html">Breakfast</a></li>
     <li><a href="lunch.html">Lunch</a></li>
     <li><a href="diner.html">Dinner</a></li>
-    <li><a href="#">Vegetarian</a></li>
+    <li><a href="vegetarian.html">Vegetarian</a></li>
     <li class="right"><a href="login.html">Login</a></li>
   </ul>
   <div id="menu" class="container">
-    <h1>Pancake House Menu</h1>
+    <h1>Pancake House Menu 🥞</h1>
   </div>
   <script>
     let host = "http://localhost:8080";
@@ -32,17 +32,15 @@
       return menu;
     }
 
-    async function displayTheMenu() {
+   async function displayTheMenu() {
       let menu = await getTheMenu();
       for (let menuItem of menu) {
         let div = document.createElement("div");
-        div.class = "menu-item";
+        div.className = "menu-item";
         div.innerHTML = `
-          <div class="menu-item">
             <div class="item-name">${menuItem.name}</div>
             <div class="item-description">${menuItem.description}</div>
             <div class="item-price">${menuItem.price}</div>
-          </div>
         `;
         menuDiv.appendChild(div);
       }
